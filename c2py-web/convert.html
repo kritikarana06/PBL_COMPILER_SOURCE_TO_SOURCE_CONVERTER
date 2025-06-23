@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Source to Source | Converter</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header style="background: rgba(15, 23, 42, 0.9); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155;">
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      
+      <h1 style="margin: 0; font-size: 1.6rem; color: #38bdf8;">Source to Source Converter</h1>
+    </div>
+    <nav>
+      <ul style="list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0;">
+        <li><a href="index.html" style="color: #38bdf8; text-decoration: none; font-weight: bold;">Home</a></li>
+        <li><a href="convert.html" style="color: #cbd5e1; text-decoration: none;">Converter</a></li>
+        <li><a href="how-it-works.html" style="color: #cbd5e1; text-decoration: none;">How It Works</a></li>
+        <li><a href="about.html" style="color: #cbd5e1; text-decoration: none;">About</a></li>
+      </ul>
+    </nav>
+    <label class="toggle-container">
+      <input type="checkbox" id="themeToggle">
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <!-- Main Content -->
+  <main style="padding: 2rem;">
+    <h2 class="center" style="text-align: center; font-size: 2rem; color: #0ea5e9;">C to Python Code Converter</h2>
+    
+    <div class="code-wrapper" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem;">
+      <div class="code-panel" style="flex: 1; min-width: 300px;">
+        <h3 style="color: #38bdf8;">C Code</h3>
+        <textarea id="cCode" placeholder="Paste your C code here..." style="width: 100%; height: 200px; padding: 1rem;"></textarea>
+      </div>
+      
+      <div class="code-panel" style="flex: 1; min-width: 300px;">
+        <h3 style="color: #38bdf8;">Python Output</h3>
+        <textarea id="pythonCode" placeholder="Converted Python code will appear here..." readonly style="width: 100%; height: 200px; padding: 1rem;"></textarea>
+        <button id="copyBtn" style="margin-top: 0.5rem;">📋 Copy Python Code</button>
+      </div>
+    </div>
+
+    <div class="center" style="text-align: center; margin-top: 2rem;">
+      <button id="convertBtn" style="padding: 0.6rem 1.5rem; font-size: 1rem;">🔁 Convert</button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 1rem; background: rgba(15,23,42,0.8); color: #94a3b8; border-top: 1px solid #334155;">
+    <p>&copy; 2025 Source to Source | Kritika Rana</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>How It Works | Source to Source Converter</title>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <!-- Basic Reset + Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f172a;
+      color: white;
+    }
+    .phase-track {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem auto;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      padding: 1rem;
+    }
+    .phase-box {
+      background: #1e293b;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      font-weight: bold;
+      opacity: 0;
+      transform: scale(0.8);
+      animation: appearPhase 0.6s ease-out forwards;
+    }
+    .phase-box:nth-child(1) { animation-delay: 0.2s; background: #3b82f6; }
+    .phase-box:nth-child(2) { animation-delay: 1s; background: #8b5cf6; }
+    .phase-box:nth-child(3) { animation-delay: 1.8s; background: #ec4899; }
+    .phase-box:nth-child(4) { animation-delay: 2.6s; background: #10b981; }
+    .phase-box:nth-child(5) { animation-delay: 3.4s; background: #f59e0b; }
+    .phase-box:nth-child(6) { animation-delay: 4.2s; background: #0ea5e9; }
+    .phase-box:nth-child(7) { animation-delay: 5s; background: #9333ea; }
+    .phase-box:nth-child(8) { animation-delay: 5.8s; background: #ef4444; }
+
+    @keyframes appearPhase {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body style="margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #0f172a; color: white;">
+
+  <!-- Particle Background -->
+  <div id="particles-js" style="position: fixed; width: 100%; height: 100%; z-index: -1;"></div>
+
+  <!-- Navigation -->
+  <header style="padding: 1.2rem 2rem; background-color: rgba(15,23,42,0.7); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155;">
+    <h1 style="margin: 0; font-size: 1.5rem; color: #38bdf8;">Source to Source Converter</h1>
+    <nav>
+      <ul style="list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0;">
+        <li><a href="index.html" style="color: #cbd5e1; text-decoration: none;">Home</a></li>
+        <li><a href="convert.html" style="color: #cbd5e1; text-decoration: none;">Converter</a></li>
+        <li><a href="how-it-works.html" style="color: #38bdf8; font-weight: bold; text-decoration: none;">How It Works</a></li>
+        <li><a href="about.html" style="color: #cbd5e1; text-decoration: none;">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Animated Phases Visualization -->
+  <div class="phase-track">
+    <div class="phase-box">Lexical Analysis</div>
+    <div class="phase-box">Syntax Analysis</div>
+    <div class="phase-box">Semantic Analysis</div>
+    <div class="phase-box">Intermediate Representation</div>
+    <div class="phase-box">Code Transformation</div>
+    <div class="phase-box">Optimization</div>
+    <div class="phase-box">Code Generation</div>
+    <div class="phase-box">Output Display</div>
+  </div>
+
+  <!-- Hero Heading -->
+  <h2 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin: 3rem 1rem 1rem; background: linear-gradient(to right, #ec4899, #8b5cf6, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+    🔍 How the Converter Works
+  </h2>
+
+  <!-- Steps Container -->
+  <section style="max-width: 900px; margin: auto; padding: 2rem 1.5rem;">
+    <!-- Step Block Template -->
+       <!-- Step Block Template -->
+    <div style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid #475569; border-radius: 12px; box-shadow: 0 0 20px rgba(14,165,233,0.1);">
+      <h3 style="color: #0ea5e9;">1. Lexical Analysis (Tokenizing)</h3>
+      <p style="line-height: 1.7; color: #e2e8f0;">
+        The raw C code is broken into tokens — keywords (<code>int</code>, <code>return</code>), identifiers (<code>x</code>, <code>sum</code>), literals (5, "hello"), and symbols (=, ;, {). This forms the base for structural analysis.
+      </p>
+    </div>
+
+    <div style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid #475569; border-radius: 12px;">
+      <h3 style="color: #0ea5e9;">2. Syntax Analysis (Parsing)</h3>
+      <p style="line-height: 1.7; color: #e2e8f0;">
+        The parser checks grammar and builds an Abstract Syntax Tree (AST), representing structure like loops or conditionals.
+      </p>
+    </div>
+
+    <div style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid #475569; border-radius: 12px;">
+      <h3 style="color: #0ea5e9;">3. Semantic Analysis</h3>
+      <p style="line-height: 1.7; color: #e2e8f0;">
+        The code is validated for meaning — checking for undeclared variables, type mismatches, and logical correctness.
+      </p>
+    </div>
+
+    <div style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid #475569; border-radius: 12px;">
+      <h3 style="color: #0ea5e9;">4. Intermediate Representation (IR)</h3>
+      <p style="line-height: 1.7; color: #e2e8f0;">
+        The AST is simplified into neutral IR — stripped of C-specific syntax but preserving logic (loops, branches, assignments).
+      </p>
+    </div>
+
+    <div style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid #475569; border-radius: 12px;">
+      <h3 style="color: #0ea5e9;">5. Code Transformation</h3>
+      <p style="line-height: 1.7; color: #e2e8f0;">
+        Neutral IR is converted into Python:
+        <br><code>int a = 5;</code> → <code>a = 5</code><br>
+        <code>for (int i = 0; i &lt; 5; i++)</code> → <code>for i in range(5):</code><br>
+        Braces → Indentation, <code>printf()</code> → <code>print()</code>
+      </p>
+    </div>
+
+    <div style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid #475569; border-radius: 12px;">
+      <h3 style="color: #0ea5e9;">6. Optimization (Optional)</h3>
+      <p style="line-height: 1.7; color: #e2e8f0;">
+        Removes redundant code: unused variables, unnecessary re-initializations, or extra conditions — for cleaner output.
+      </p>
+    </div>
+
+    <div style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid #475569; border-radius: 12px;">
+      <h3 style="color: #0ea5e9;">7. Code Generation</h3>
+      <p style="line-height: 1.7; color: #e2e8f0;">
+        The polished Python code is generated with proper indentation, spacing, and formatting.
+      </p>
+    </div>
+
+    <div style="margin-bottom: 3rem; padding: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid #475569; border-radius: 12px;">
+      <h3 style="color: #0ea5e9;">8. Output Display</h3>
+      <p style="line-height: 1.7; color: #e2e8f0;">
+        You see your converted Python code in a neat output box — ready to run, edit, or refine.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 1.2rem; font-size: 0.9rem; background: rgba(15,23,42,0.6); border-top: 1px solid #334155; color: #94a3b8;">
+    &copy; 2025 Source to Source | Built by Kritika Rana | Vani Gupta | Nikita Joshi | Aastha Thakur
+  </footer>
+
+</body>
+</html>
+

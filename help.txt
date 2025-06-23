@@ -1,0 +1,11 @@
+make
+bison -d -o parser.cpp parser.y --debug
+parser.y: warning: 13 shift/reduce conflicts [-Wconflicts-sr]
+parser.y: warning: 20 reduce/reduce conflicts [-Wconflicts-rr]
+parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+lex -d -o tokens.cpp tokens.l parser.hpp
+g++ -g -o parser parser.cpp codegen.cpp main.cpp tokens.cpp -DYYDEBUG=1 -std=c++11
+
+
+./parser examples/factorial.c
+python simple_compiler_ui.py

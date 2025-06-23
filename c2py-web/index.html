@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Source to Source Converter | Home</title>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <!-- Typed.js for typing effect -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body style="margin: 0; font-family: 'Inter', sans-serif; color: white; background-color: #1a1a2e;">
+
+  <!-- Particles Background -->
+  <div id="particles-js" style="position: fixed; width: 100%; height: 100%; z-index: -1; top: 0; left: 0;"></div>
+
+  <!-- Navigation -->
+  <header style="background: rgba(15, 23, 42, 0.8); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155;">
+  <div style="display: flex; align-items: center; gap: 0.75rem;">
+    
+    <h1 style="margin: 0; font-size: 1.6rem; color: #38bdf8;">Source to Source Converter</h1>
+  </div>
+  <nav>
+    <ul style="list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0;">
+      <li><a href="index.html" style="color: #f1f5f9; text-decoration: none; font-weight: bold; border-bottom: 2px solid #38bdf8;">Home</a></li>
+      <li><a href="convert.html" style="color: #cbd5e1; text-decoration: none;">Converter</a></li>
+      <li><a href="how-it-works.html" style="color: #cbd5e1; text-decoration: none;">How It Works</a></li>
+      <li><a href="about.html" style="color: #cbd5e1; text-decoration: none;">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+ <h2 style="
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 800;
+  position: relative;
+">
+  <span id="typeWrapper" style="
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: linear-gradient(to right, #6366f1, #ec4899, #0ea5e9);
+    color: white;
+    border-radius: 12px;
+    transition: transform 0.25s ease-in-out, padding 0.25s ease-in-out;
+  ">
+    <span id="typed-text"></span>
+  </span>
+</h2>
+
+ <!-- Hero Section -->
+<section style="
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background: transparent;
+  color: #e0f2fe;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+">
+  <div style="
+    max-width: 620px;
+    padding: 2rem 1.5rem;
+    background: rgba(9, 15, 30, 0.6); color: #e0f2fe; padding: 2rem; border-radius: 20px; width: 800px; backdrop-filter: blur(8px); border: 2px solid #078f1c; box-shadow: 0 0 20px rgba(33, 215, 115, 0.4); transition: all 0.4s ease; cursor: pointer;
+    backdrop-filter: blur(10px);
+    
+    text-align: center;
+  ">
+    <p style="
+    font-family: cursive;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      font-weight: 600;
+      background: white;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.2px;
+    ">
+      Instantly convert your C code into clean Python.  
+      Learn syntax differences and build faster.
+    </p>
+
+    <a href="convert.html" style="
+      display: inline-block;
+      padding: 12px 28px;
+      background: linear-gradient(to right, #38bdf8, #d326d1);
+      color: white;
+      font-family:cursive;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 0 15px rgba(14,165,233,0.6);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    "
+    onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px rgba(14,165,233,0.8)'"
+    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(14,165,233,0.6)'">
+      Convert C to Python
+    </a>
+  </div>
+</section>
+
+
+
+  <!-- Features Section -->
+ <section style="padding: 4rem 2rem; text-align: center;">
+  <h3 style="
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  background: #833AB4;
+background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgb(216, 208, 208) 41%, rgb(199, 178, 159) 86%, rgba(252, 176, 69, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.4);
+  letter-spacing: 1px;
+">
+  🚀 Why Use Source to Source Converter?
+</h3>
+
+
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+    
+    <div style="background: rgba(9, 15, 30, 0.6); color: #e0f2fe; padding: 2rem; border-radius: 20px; width: 300px; backdrop-filter: blur(8px); border: 2px solid #60a5fa; box-shadow: 0 0 20px rgba(96,165,250,0.4); transition: all 0.4s ease; cursor: pointer;" 
+      onmouseover="this.style.transform='scale(1.07)'; this.style.boxShadow='0 0 30px rgba(96,165,250,0.8)'" 
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 20px rgba(96,165,250,0.4)'" 
+      data-aos="zoom-in" data-aos-delay="100">
+      <h4 style="color: #60a5fa; font-size: 1.4rem; margin-bottom: 0.6rem;">📄 Simple Interface</h4>
+      <p style="font-size: 1rem;">Paste your C code and get Python output instantly—no logins, no downloads.</p>
+    </div>
+
+    <div style="background: rgba(9, 15, 30, 0.6); color: #e0f2fe; padding: 2rem; border-radius: 20px; width: 300px; backdrop-filter: blur(8px); border: 2px solid #34d399; box-shadow: 0 0 20px rgba(52,211,153,0.4); transition: all 0.4s ease; cursor: pointer;" 
+      onmouseover="this.style.transform='scale(1.07)'; this.style.boxShadow='0 0 30px rgba(52,211,153,0.8)'" 
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 20px rgba(52,211,153,0.4)'" 
+      data-aos="zoom-in" data-aos-delay="300">
+      <h4 style="color: #34d399; font-size: 1.4rem; margin-bottom: 0.6rem;">🧠 Learn Syntax</h4>
+      <p style="font-size: 1rem;">Compare C and Python side-by-side to understand how they work under the hood.</p>
+    </div>
+    
+    <div style="background: rgba(9, 15, 30, 0.6); color: #e0f2fe; padding: 2rem; border-radius: 20px; width: 300px; backdrop-filter: blur(8px); border: 2px solid #38bdf8; box-shadow: 0 0 20px rgba(56,189,248,0.4); transition: all 0.4s ease; cursor: pointer;" 
+      onmouseover="this.style.transform='scale(1.07)'; this.style.boxShadow='0 0 30px rgba(56,189,248,0.8)'" 
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 20px rgba(56,189,248,0.4)'" 
+      data-aos="zoom-in" data-aos-delay="200">
+      <h4 style="color: #38bdf8; font-size: 1.4rem; margin-bottom: 0.6rem;">⚡ Fast Conversion</h4>
+      <p style="font-size: 1rem;">Custom parsing engine delivers accurate Python code in milliseconds.</p>
+    </div>
+
+    
+
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 2rem; background-color: rgba(0, 0, 0, 0.4); font-size: 0.9rem;">
+    <p>&copy; 2025 Source to Cource | Built by Kritika Rana | Vani Gupta | Nikita Joshi | Aastha Thakur</p>
+  </footer>
+
+  <!-- Particles Config -->
+  <script src="particles-config.js"></script>
+
+  <!-- Typed Text -->
+  <script>
+    new Typed("#typed-text", {
+      strings: [
+        "Convert C to Python in Seconds",
+        "Fast. Simple. Powerful.",
+        "Learn and Build Together!"
+      ],
+      typeSpeed: 45,
+      backSpeed: 30,
+      backDelay: 2000,
+      loop: true
+      
+    });
+
+    AOS.init();
+  </script>
+</body>
+</html>
